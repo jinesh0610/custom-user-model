@@ -3,11 +3,12 @@
 {% block content %}
 <div>
     {% if  user.is_authenticated %}
-    Hi {{ user.username }} You are {{user.age}} years old.
+    Hi {{ user.username }} Check out our Latest Article
     <p><a href="{% url "logout" %}">Log Out</a></p>
     {% else %}
-    You are not Login
-    <a href="{% url "login" %}">Login</a> | <a href="{% url "signup" %}">Register</a>
+   <h4> You are not Login Yet. Check out our Latest Article You need to login</h4>
+    <p> <a href="{% url "login" %}">Login</a> | <a href="{% url "signup" %}">Register</a></p>
+   
     {% endif %}
 </div>
 {% endblock content %}
